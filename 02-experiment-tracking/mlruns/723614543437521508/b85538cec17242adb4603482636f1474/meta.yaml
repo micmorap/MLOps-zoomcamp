@@ -1,0 +1,15 @@
+artifact_uri: file:///home/mlops_zoomcamp/mlops-zoomcamp/02-experiment-tracking/mlruns/723614543437521508/b85538cec17242adb4603482636f1474/artifacts
+end_time: 1716744204270
+entry_point_name: ''
+experiment_id: '723614543437521508'
+lifecycle_stage: active
+run_id: b85538cec17242adb4603482636f1474
+run_name: legendary-fox-819
+run_uuid: b85538cec17242adb4603482636f1474
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716744189734
+status: 3
+tags: []
+user_id: mlops_zoomcamp
