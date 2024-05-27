@@ -1,0 +1,15 @@
+artifact_uri: file:///home/mlops_zoomcamp/mlops-zoomcamp/02-experiment-tracking/mlruns/723614543437521508/efcaf48cb3de44cb88bcc1eee24bdd7d/artifacts
+end_time: 1716743874222
+entry_point_name: ''
+experiment_id: '723614543437521508'
+lifecycle_stage: active
+run_id: efcaf48cb3de44cb88bcc1eee24bdd7d
+run_name: unruly-vole-773
+run_uuid: efcaf48cb3de44cb88bcc1eee24bdd7d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716743859673
+status: 3
+tags: []
+user_id: mlops_zoomcamp
