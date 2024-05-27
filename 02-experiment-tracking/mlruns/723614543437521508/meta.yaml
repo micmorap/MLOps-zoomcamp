@@ -1,0 +1,6 @@
+artifact_location: file:///home/mlops_zoomcamp/mlops-zoomcamp/02-experiment-tracking/mlruns/723614543437521508
+creation_time: 1716743223479
+experiment_id: '723614543437521508'
+last_update_time: 1716743223479
+lifecycle_stage: active
+name: nyc-taxi-experiment-hw2
