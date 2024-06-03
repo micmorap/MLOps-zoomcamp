@@ -1,0 +1,13 @@
+dataset_homework_03:
+  object_type: pipeline
+  object_uuid: data_pipeline_hw3
+  outdated_after:
+    weeks: 8
+  outdated_starting_at:
+    day_of_month: 8
+    hour_of_day: 8
+    month_of_year: 8
+  project: 03-homework
+  repo_path: /home/src/mlops/03-homework
+  settings:
+    prepare_hw3: {}

@@ -1,0 +1,14 @@
+import pandas as pd
+
+from read_df import read_dataframe
+
+if 'transformer' not in globals():
+    from mage_ai.data_preparation.decorators import transformer
+
+
+@transformer
+def transform(df: pd.DataFrame):
+
+    df_filter = read_dataframe(df)
+
+    return df_filter
