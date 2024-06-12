@@ -1,0 +1,47 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction import DictVectorizer
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+import os
+import pickle
+
+
+if 'data_exporter' not in globals():
+    from mage_ai.data_preparation.decorators import data_exporter
+
+
+def split_training_set(df: DataFrame) -> None:
+    # Filtrar los datos para mantener solo las columnas 'PULocationID' y 'DOLocationID'
+    X = df[['PULocationID', 'DOLocationID']].astype(str)
+    # Convertir el DataFrame en una lista de diccionarios
+    data_dict = X.to_dict(orient='records')
+    y = df['duration'].values
+
+    return train_test_split(X, y)
+
+# Convertir el DataFrame en una lista de diccionarios
+data_dict = df_locations.to_dict(orient='records')
+
+# Inicializar el DictVectorizer
+dv = DictVectorizer(sparse=True)
+
+# Ajustar el DictVectorizer a los datos y transformar los datos en una matriz de características
+X_train = dv.fit_transform(data_dict)
+
+
+@data_exporter
+def export_data(data, *args, **kwargs):
+    """
+    Exports data to some source.
+
+    Args:
+        data: The output from the upstream parent block
+        args: The output from any additional upstream blocks (if applicable)
+
+    Output (optional):
+        Optionally return any object and it'll be logged and
+        displayed when inspecting the block run.
+    """
+    # Specify your data exporting logic here
+
