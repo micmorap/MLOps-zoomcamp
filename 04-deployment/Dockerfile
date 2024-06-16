@@ -20,3 +20,5 @@ COPY starter.py /app/
 
 CMD ["python", "starter.py", "2023", "5" ]
 
+# docker build -t ride-duration-prediction-service:v1 .
+# docker run -it --rm -p 9696:9696  ride-duration-prediction-service:v1
