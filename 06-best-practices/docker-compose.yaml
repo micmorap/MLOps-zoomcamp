@@ -1,7 +1,10 @@
 services:
-  s3:
+  localstack:
     image: localstack/localstack
     ports:
       - "4566:4566"
     environment:
       - SERVICES=s3
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=AKIAYSHAVZVZZUXYHYOI
+      - AWS_SECRET_ACCESS_KEY=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
