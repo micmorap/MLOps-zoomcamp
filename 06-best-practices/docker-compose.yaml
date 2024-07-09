@@ -6,5 +6,5 @@ services:
     environment:
       - SERVICES=s3
       - AWS_DEFAULT_REGION=us-east-1
-      - AWS_ACCESS_KEY_ID=AKIAYSHAVZVZZUXYHYOI
-      - AWS_SECRET_ACCESS_KEY=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
+      - AWS_ACCESS_KEY_ID=xxx
+      - AWS_SECRET_ACCESS_KEY=fdfdf

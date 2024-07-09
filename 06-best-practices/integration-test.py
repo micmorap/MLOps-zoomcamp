@@ -18,20 +18,18 @@ options = {
 }
 
 data = [
-    (None, None, dt(1, 2), dt(1, 10)),
-    (1, None, dt(1, 2), dt(1, 10)),
-    (1, 2, dt(2, 2), dt(2, 3)),
-    (None, 1, dt(1, 2, 0), dt(1, 2, 50)),
-    (2, 3, dt(1, 2, 0), dt(1, 2, 59)),
-    (3, 4, dt(1, 2, 0), dt(2, 2, 1)),
+    (None, None, dt(1, 1), dt(1, 10)),
+    (1, 1, dt(1, 2), dt(1, 10)),
+    (1, None, dt(1, 2, 0), dt(1, 2, 59)),
+    (3, 4, dt(1, 2, 0), dt(2, 2, 1)),      
 ]
 
 columns = ['PULocationID', 'DOLocationID', 'tpep_pickup_datetime', 'tpep_dropoff_datetime']
 categorical = ['PULocationID', 'DOLocationID']
 df_input = pd.DataFrame(data, columns=columns)
 
-input_file = batch.get_input_path(2022, 1)
-output_file = batch.get_output_path(2022, 1)
+input_file = batch.get_input_path(2023, 1)
+output_file = batch.get_output_path(2023, 1)
 
 df_result_test = batch.prepare_data(df_input, categorical)
 
@@ -41,14 +39,15 @@ df_result_test.to_parquet(
     engine='pyarrow',
     compression=None,
     index=False,
-    # storage_options=options
+    storage_options=options
 )
 
-os.system('python batch.py 2022 1')
+os.system('python batch.py 2023 1')
 
 
 df_actual = pd.read_parquet(output_file, storage_options=options)
 print(df_actual.columns)
-print(df_actual['predicted_duration'].sum())
+print(df_actual['predictions'].sum())
+
 
 # assert abs(df_actual['predicted_duration'].sum() - 31.51) < 0.1
